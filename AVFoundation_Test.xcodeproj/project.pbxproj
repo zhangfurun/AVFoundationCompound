@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		150CAD3C25F0F27E003E9B07 /* VideoEditPlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 150CAD3B25F0F27E003E9B07 /* VideoEditPlayView.m */; };
+		150CAD4225F0F79C003E9B07 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 150CAD4125F0F79C003E9B07 /* AVFoundation.framework */; };
+		150CAD4925F0FA02003E9B07 /* Video_0.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 150CAD4625F0FA02003E9B07 /* Video_0.MP4 */; };
+		150CAD4A25F0FA02003E9B07 /* Video_2.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 150CAD4725F0FA02003E9B07 /* Video_2.MP4 */; };
+		150CAD4B25F0FA02003E9B07 /* Video_1.MP4 in Resources */ = {isa = PBXBuildFile; fileRef = 150CAD4825F0FA02003E9B07 /* Video_1.MP4 */; };
 		15795E5C25F0E867000938C2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15795E5B25F0E867000938C2 /* AppDelegate.m */; };
 		15795E5F25F0E867000938C2 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 15795E5E25F0E867000938C2 /* SceneDelegate.m */; };
 		15795E6225F0E867000938C2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 15795E6125F0E867000938C2 /* ViewController.m */; };
@@ -16,6 +21,7 @@
 		15795E6D25F0E86B000938C2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 15795E6C25F0E86B000938C2 /* main.m */; };
 		15795E7725F0E86B000938C2 /* AVFoundation_TestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15795E7625F0E86B000938C2 /* AVFoundation_TestTests.m */; };
 		15795E8225F0E86C000938C2 /* AVFoundation_TestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 15795E8125F0E86C000938C2 /* AVFoundation_TestUITests.m */; };
+		15795E9425F0E8C7000938C2 /* AVFundationCompositionTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 15795E9325F0E8C7000938C2 /* AVFundationCompositionTool.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		150CAD3A25F0F27E003E9B07 /* VideoEditPlayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoEditPlayView.h; sourceTree = "<group>"; };
+		150CAD3B25F0F27E003E9B07 /* VideoEditPlayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VideoEditPlayView.m; sourceTree = "<group>"; };
+		150CAD4125F0F79C003E9B07 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		150CAD4625F0FA02003E9B07 /* Video_0.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Video_0.MP4; sourceTree = "<group>"; };
+		150CAD4725F0FA02003E9B07 /* Video_2.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Video_2.MP4; sourceTree = "<group>"; };
+		150CAD4825F0FA02003E9B07 /* Video_1.MP4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = Video_1.MP4; sourceTree = "<group>"; };
 		15795E5725F0E867000938C2 /* AVFoundation_Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AVFoundation_Test.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		15795E5A25F0E867000938C2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		15795E5B25F0E867000938C2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -54,6 +66,8 @@
 		15795E7D25F0E86C000938C2 /* AVFoundation_TestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AVFoundation_TestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		15795E8125F0E86C000938C2 /* AVFoundation_TestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVFoundation_TestUITests.m; sourceTree = "<group>"; };
 		15795E8325F0E86C000938C2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		15795E9225F0E8C7000938C2 /* AVFundationCompositionTool.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVFundationCompositionTool.h; sourceTree = "<group>"; };
+		15795E9325F0E8C7000938C2 /* AVFundationCompositionTool.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVFundationCompositionTool.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				150CAD4225F0F79C003E9B07 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		150CAD4025F0F79C003E9B07 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				150CAD4125F0F79C003E9B07 /* AVFoundation.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		15795E4E25F0E862000938C2 = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +111,7 @@
 				15795E7525F0E86B000938C2 /* AVFoundation_TestTests */,
 				15795E8025F0E86C000938C2 /* AVFoundation_TestUITests */,
 				15795E5825F0E867000938C2 /* Products */,
+				150CAD4025F0F79C003E9B07 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,6 +134,13 @@
 				15795E5E25F0E867000938C2 /* SceneDelegate.m */,
 				15795E6025F0E867000938C2 /* ViewController.h */,
 				15795E6125F0E867000938C2 /* ViewController.m */,
+				15795E9225F0E8C7000938C2 /* AVFundationCompositionTool.h */,
+				15795E9325F0E8C7000938C2 /* AVFundationCompositionTool.m */,
+				150CAD3A25F0F27E003E9B07 /* VideoEditPlayView.h */,
+				150CAD3B25F0F27E003E9B07 /* VideoEditPlayView.m */,
+				150CAD4625F0FA02003E9B07 /* Video_0.MP4 */,
+				150CAD4825F0FA02003E9B07 /* Video_1.MP4 */,
+				150CAD4725F0FA02003E9B07 /* Video_2.MP4 */,
 				15795E6325F0E867000938C2 /* Main.storyboard */,
 				15795E6625F0E86B000938C2 /* Assets.xcassets */,
 				15795E6825F0E86B000938C2 /* LaunchScreen.storyboard */,
@@ -239,6 +270,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				150CAD4A25F0FA02003E9B07 /* Video_2.MP4 in Resources */,
+				150CAD4B25F0FA02003E9B07 /* Video_1.MP4 in Resources */,
+				150CAD4925F0FA02003E9B07 /* Video_0.MP4 in Resources */,
 				15795E6A25F0E86B000938C2 /* LaunchScreen.storyboard in Resources */,
 				15795E6725F0E86B000938C2 /* Assets.xcassets in Resources */,
 				15795E6525F0E867000938C2 /* Main.storyboard in Resources */,
@@ -266,6 +300,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				150CAD3C25F0F27E003E9B07 /* VideoEditPlayView.m in Sources */,
+				15795E9425F0E8C7000938C2 /* AVFundationCompositionTool.m in Sources */,
 				15795E6225F0E867000938C2 /* ViewController.m in Sources */,
 				15795E5C25F0E867000938C2 /* AppDelegate.m in Sources */,
 				15795E6D25F0E86B000938C2 /* main.m in Sources */,
