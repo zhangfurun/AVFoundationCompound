@@ -62,17 +62,50 @@ static NSString * const CompositionVideoMP4Name = @"CompositionVideoMP4Name.mp4"
 }
 
 - (IBAction)onCompoundBtnTap:(UIButton *)sender {
+//    [self viodesCompound];
+    [self videosAndAudioCompound];
+}
+
+- (void)viodesCompound {
     NSString *str = [[NSBundle mainBundle] resourcePath];
-    NSString *filePath_0 = [NSString stringWithFormat:@"%@%@",str,@"/Video_0.MP4"];
-    NSString *filePath_1 = [NSString stringWithFormat:@"%@%@",str,@"/Video_1.MP4"];
-    NSString *filePath_2 = [NSString stringWithFormat:@"%@%@",str,@"/Video_2.MP4"];
     
-    NSURL *video_0 = [NSURL fileURLWithPath:filePath_0];
-    NSURL *video_1 = [NSURL fileURLWithPath:filePath_1];
-    NSURL *video_2 = [NSURL fileURLWithPath:filePath_2];
+    NSMutableArray *videos = [NSMutableArray array];
+    for (int i = 0; i < 5; i++) {
+        NSString *filePath = [NSString stringWithFormat:@"%@/Video_%d.mp4",str, i];
+        NSURL *video = [NSURL fileURLWithPath:filePath];
+        [videos addObject:video];
+    }
     
     __weak typeof(self) WS = self;
-    [AVFundationCompositionTool compoundVideoWithSubSectionVideoPaths:@[video_0, video_1, video_2]
+    [AVFundationCompositionTool compoundVideoWithSubSectionVideoPaths:videos
+                                                    compoundVideoPath:COMPOUND_VIDEO_MP4_FILE_PATH
+                                                       completedBlock:^(BOOL success, NSString * _Nonnull errorMsg) {
+        if (success) {
+            NSLog(@"成功");
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                [WS startPlayCompoundVideo];
+            });
+        } else {
+            NSLog(@"失败");
+        }
+    }];
+}
+
+- (void)videosAndAudioCompound {
+    NSMutableArray *videos = [NSMutableArray array];
+
+    NSString *str = [[NSBundle mainBundle] resourcePath];
+    for (int i = 0; i < 5; i++) {
+        NSString *filePath = [NSString stringWithFormat:@"%@/Video_%d.mp4",str, i];
+        NSURL *video = [NSURL fileURLWithPath:filePath];
+        [videos addObject:video];
+    }
+    
+    NSURL *audio_0 = [NSURL fileURLWithPath:[NSString stringWithFormat:@"%@%@",str,@"/bgm.mp3"]];
+    
+    __weak typeof(self) WS = self;
+    [AVFundationCompositionTool compoundVideoWithSubSectionVideoPaths:videos
+                                                            audioPath:audio_0
                                                     compoundVideoPath:COMPOUND_VIDEO_MP4_FILE_PATH
                                                        completedBlock:^(BOOL success, NSString * _Nonnull errorMsg) {
         if (success) {

@@ -15,6 +15,11 @@ typedef void(^CompFinalCompletedBlock)(BOOL success, NSString *errorMsg);
 + (void)compoundVideoWithSubSectionVideoPaths:(NSArray<NSURL *> *)videoPaths
                             compoundVideoPath:(NSString *)compoundVideoPath
                                completedBlock:(CompFinalCompletedBlock)completedBlock;
+
++ (void)compoundVideoWithSubSectionVideoPaths:(NSArray<NSURL *> *)videoPaths
+                                    audioPath:(NSURL *)audioPath
+                            compoundVideoPath:(NSString *)compoundVideoPath
+                               completedBlock:(CompFinalCompletedBlock)completedBlock;
 @end
 
 NS_ASSUME_NONNULL_END
