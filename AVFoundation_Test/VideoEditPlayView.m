@@ -74,7 +74,7 @@
     [self creatPlayer:videoURL];
     
     [_player play];
-    [self useDelegateWith:AVPlayerStatusLoadingVideo];
+    [self useDelegateWith:ZFR_AVPlayerStatusLoadingVideo];
 }
 
 /**
@@ -173,7 +173,7 @@
   
   @param status 播放状态
  */
-- (void)useDelegateWith:(AVPlayerStatus)status
+- (void)useDelegateWith:(ZFR_AVPlayerStatus)status
 {
     if (self.isCanPlay == NO) {
         return;
@@ -321,7 +321,7 @@
         if (self.isCanPlay) {
             NSLog(@"跳转后没数据");
             self.needBuffer = YES;
-            [self useDelegateWith:AVPlayerStatusCacheData];
+            [self useDelegateWith:ZFR_AVPlayerStatusCacheData];
         }
         
         
@@ -337,7 +337,7 @@
             
             self.needBuffer = NO;
             
-            [self useDelegateWith:AVPlayerStatusCacheEnd];
+            [self useDelegateWith:ZFR_AVPlayerStatusCacheEnd];
         }
         
     }
@@ -356,13 +356,13 @@
             
             NSLog(@"AVPlayerItemStatusReadyToPlay");
             self.isCanPlay = YES;
-            [self useDelegateWith:AVPlayerStatusReadyToPlay];
+            [self useDelegateWith:ZFR_AVPlayerStatusReadyToPlay];
             
             break;
         case AVPlayerItemStatusFailed:        // 播放出错
             
             NSLog(@"AVPlayerItemStatusFailed");
-            [self useDelegateWith:AVPlayerStatusItemFailed];
+            [self useDelegateWith:ZFR_AVPlayerStatusItemFailed];
             
             break;
         case AVPlayerItemStatusUnknown:       // 状态未知
@@ -441,7 +441,7 @@
 - (void)videoPlayEnd:(NSNotification *)notic
 {
     NSLog(@"视频播放结束");
-    [self useDelegateWith:AVPlayerStatusPlayEnd];
+    [self useDelegateWith:ZFR_AVPlayerStatusPlayEnd];
     [self.player seekToTime:kCMTimeZero];
     if (self.isReplay) {
         [self play];
@@ -456,19 +456,19 @@
 - (void)videoPlayError:(NSNotification *)notic
 {
     NSLog(@"视频异常中断");
-    [self useDelegateWith:AVPlayerStatusPlayStop];
+    [self useDelegateWith:ZFR_AVPlayerStatusPlayStop];
 }
 /** 进入后台 */
 - (void)videoPlayEnterBack:(NSNotification *)notic
 {
     NSLog(@"进入后台");
-    [self useDelegateWith:AVPlayerStatusEnterBack];
+    [self useDelegateWith:ZFR_AVPlayerStatusEnterBack];
 }
 /** 返回前台 */
 - (void)videoPlayBecomeActive:(NSNotification *)notic
 {
     NSLog(@"返回前台");
-    [self useDelegateWith:AVPlayerStatusBecomeActive];
+    [self useDelegateWith:ZFR_AVPlayerStatusBecomeActive];
 }
 
 #pragma mark - 销毁 release

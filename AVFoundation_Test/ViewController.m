@@ -119,8 +119,8 @@ static NSString * const CompositionVideoMP4Name = @"CompositionVideoMP4Name.mp4"
     }];
 }
 
-- (void)promptPlayerStatusOrErrorWith:(AVPlayerStatus)status {
-    if (status == AVPlayerStatusPlayEnd) {
+- (void)promptPlayerStatusOrErrorWith:(ZFR_AVPlayerStatus)status {
+    if (status == ZFR_AVPlayerStatusPlayEnd) {
 //        [self.player play];
     }
 }

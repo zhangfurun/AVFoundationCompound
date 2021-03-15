@@ -14,16 +14,16 @@ NS_ASSUME_NONNULL_BEGIN
 // 默认为 全屏幕显示, 循环播放
 
 
-typedef NS_ENUM(NSInteger, AVPlayerStatus) {
-    AVPlayerStatusReadyToPlay = 0, // 准备好播放
-    AVPlayerStatusLoadingVideo,    // 加载视频
-    AVPlayerStatusPlayEnd,         // 播放结束
-    AVPlayerStatusCacheData,       // 缓冲视频
-    AVPlayerStatusCacheEnd,        // 缓冲结束
-    AVPlayerStatusPlayStop,        // 播放中断 （多是没网）
-    AVPlayerStatusItemFailed,      // 视频资源问题
-    AVPlayerStatusEnterBack,       // 进入后台
-    AVPlayerStatusBecomeActive,    // 从后台返回
+typedef NS_ENUM(NSInteger, ZFR_AVPlayerStatus) {
+    ZFR_AVPlayerStatusReadyToPlay = 0, // 准备好播放
+    ZFR_AVPlayerStatusLoadingVideo,    // 加载视频
+    ZFR_AVPlayerStatusPlayEnd,         // 播放结束
+    ZFR_AVPlayerStatusCacheData,       // 缓冲视频
+    ZFR_AVPlayerStatusCacheEnd,        // 缓冲结束
+    ZFR_AVPlayerStatusPlayStop,        // 播放中断 （多是没网）
+    ZFR_AVPlayerStatusItemFailed,      // 视频资源问题
+    ZFR_AVPlayerStatusEnterBack,       // 进入后台
+    ZFR_AVPlayerStatusBecomeActive,    // 从后台返回
 };
 
 @protocol VideoEditPlayViewDelegate <NSObject>
@@ -32,7 +32,7 @@ typedef NS_ENUM(NSInteger, AVPlayerStatus) {
 // 数据刷新
 - (void)refreshDataWith:(NSTimeInterval)totalTime Progress:(NSTimeInterval)currentTime LoadRange:(NSTimeInterval)loadTime;
 // 状态/错误 提示
-- (void)promptPlayerStatusOrErrorWith:(AVPlayerStatus)status;
+- (void)promptPlayerStatusOrErrorWith:(ZFR_AVPlayerStatus)status;
 
 @end
 

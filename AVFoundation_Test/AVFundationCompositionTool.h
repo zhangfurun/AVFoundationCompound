@@ -12,12 +12,14 @@ NS_ASSUME_NONNULL_BEGIN
 typedef void(^CompFinalCompletedBlock)(BOOL success, NSString *errorMsg);
 
 @interface AVFundationCompositionTool : NSObject
+// 纯视频合成
 + (void)compoundVideoWithSubSectionVideoPaths:(NSArray<NSURL *> *)videoPaths
                             compoundVideoPath:(NSString *)compoundVideoPath
                                completedBlock:(CompFinalCompletedBlock)completedBlock;
 
+// 音视频合成
 + (void)compoundVideoWithSubSectionVideoPaths:(NSArray<NSURL *> *)videoPaths
-                                    audioPath:(NSURL *)audioPath
+                                    audioPath:(NSURL * __nullable)audioPath
                             compoundVideoPath:(NSString *)compoundVideoPath
                                completedBlock:(CompFinalCompletedBlock)completedBlock;
 @end
